@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
-Copyright: Commonwealth Government (Geoscience Australia) 2016
+Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of Belgium (ROB) 2024
 -->
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.6" version="0.6" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.6" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <annotation>
@@ -10,7 +10,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <!--  -->
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
-    <!--  -->
     <include schemaLocation="commonTypes.xsd"/>
     <include schemaLocation="quality.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
@@ -22,7 +21,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <include schemaLocation="project.xsd"/>
     <!--  -->
     <include schemaLocation="siteLog.xsd"/>
-    <!--  -->
+    
     <complexType name="GeodesyMLPropertyType">
         <sequence minOccurs="0">
             <element ref="geo:GeodesyML"/>
@@ -36,6 +35,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
+                    <element minOccurs="0" name="Metadata" type="gmd:MD_Metadata_Type"/>
                     <element minOccurs="0" ref="gml:validTime"/>
                     <choice maxOccurs="unbounded">
                         <element ref="geo:Node"/>

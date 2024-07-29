@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
-Copyright: Commonwealth Government (Geoscience Australia) 2016
+Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of Belgium (ROB) 2024
 -->
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.6" version="0.6" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.6" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" >
     <annotation>
@@ -124,6 +124,42 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         <annotation>
             <documentation xml:lang="en">
                 Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
+    <!--  -->
+    <complexType name="DatacenterCodeType" mixed="true">
+        <annotation>
+            <documentation xml:lang="en">
+                Data center code list type
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="codeList" type="anyURI"/>
+                <attribute name="codeListValue" type="anyURI"/>
+                <attribute name="codeSpace" type="anyURI"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <!--  -->
+    <complexType name="NetworkCodeType">
+        <annotation>
+            <documentation xml:lang="en">
+                GNSS network code list type
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
+    <complexType name="LicenseType">
+        <annotation>
+            <documentation xml:lang="en">
+                List of available License
             </documentation>
         </annotation>
         <complexContent>
