@@ -29,14 +29,14 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
                             <documentation>Type of document.</documentation>
                         </annotation>
                     </element>
-					<element minOccurs="0" name="keywords" type="geo:KeywordsType"/>
+                    <element minOccurs="0" name="keywords" type="geo:KeywordsType"/>
                     <element minOccurs="0" name="createdDate" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="receivedDate" type="gml:TimePositionType"/>
-					<element minOccurs="0" name="publishedDate" type="gml:TimePositionType"/>
+                    <element minOccurs="0" name="publishedDate" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="custodian" type="gmd:CI_ResponsibleParty_PropertyType"/>
-					<element minOccurs="0" name="creator" type="gmd:CI_ResponsibleParty_PropertyType"/>
-					<element minOccurs="0" name="publisher" type="gmd:CI_ResponsibleParty_PropertyType"/>
-					<element minOccurs="0" name="license" type="geo:LicenseType"/>
+                    <element minOccurs="0" name="creator" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <element minOccurs="0" name="publisher" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <element minOccurs="0" name="license" type="geo:LicenseType"/>
                     <element minOccurs="0" name="remarks" type="string"/>
                     <element minOccurs="0" name="body">
                         <complexType>
@@ -60,23 +60,23 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
             </extension>
         </complexContent>
     </complexType>
-	<!-- -->
-	<complexType name="KeywordsType">
+    <!-- -->
+    <complexType name="KeywordsType">
         <sequence>
             <element name="KeywordList" type="geo:KeywordListType"/>
         </sequence>
     </complexType>
-	<complexType name="KeywordListType">
+    <complexType name="KeywordListType">
         <sequence>
             <element name="keyword" type="geo:KeywordType" maxOccurs="unbounded"/>
         </sequence>
     </complexType>
-	<complexType name="KeywordType">
+    <complexType name="KeywordType">
         <simpleContent>
             <extension base="string"/>
         </simpleContent>
     </complexType>
-	<!-- -->
+    <!-- -->
     <simpleType name="EncodingType">
         <restriction base="string">
             <enumeration value="none"/>
